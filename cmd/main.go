@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -70,7 +71,8 @@ func main() {
 
 				amtLine, _ := reader.ReadString('\n')
 				amtLine = strings.TrimSpace(amtLine)
-				amount, _ = strconv.ParseFloat(amtLine, 64)
+				val, _ := strconv.ParseFloat(amtLine, 64)
+				amount = math.Round(val*100) / 100 // round to 2 decimals
 
 				fmt.Print("Enter Description (optional): ")
 				desc, _ := reader.ReadString('\n')
