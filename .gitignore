@@ -1,0 +1,24 @@
+# Binaries
+*.exe
+*.out
+*.dll
+*.test
+
+# Go build caches
+bin/
+pkg/
+*.log
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+#csv data
+data/*.csv
+
+#data folder
+!data/.gitkeep
